@@ -12,8 +12,7 @@ def read_forecast():
     x = 0
     for data in data_json['hourly']['time']:
         #forecast_timestamp_iso = datetime.datetime.fromtimestamp(int(data_json['hourly']['time'][x])).strftime('%d/%m/%Y %H:%M')
-        forecast_timestamp_iso = datetime.datetime.fromtimestamp(data_json['hourly']['time'][x])
-        forecast_data = Forecast(forecast_timestamp_iso, data_json['hourly']['temperature_2m'][x])
+        forecast_data = Forecast(data_json['hourly']['time'][x], data_json['hourly']['temperature_2m'][x])
         forecast_list.append(forecast_data)
         x = x+1
 

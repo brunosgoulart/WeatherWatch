@@ -24,24 +24,9 @@
                     datasets: 
                     [{
                         label: 'Temperature Chart',
-                        data: ['1'],
+                        data: {{temperature}},
                         borderWidth: 1
                     }]
-                },
-                options:
-                {
-                    scales:
-                    {
-                        x:
-                        {
-                            type: 'time',
-                            time:
-                            {
-                                parser: 'HH:mm:ss',
-                                unit: 'hour'
-                            }
-                        }
-                    }
                 }
             })
         </script>
